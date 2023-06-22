@@ -1,2 +1,7 @@
 # rust_vulkan
-Vulkan with Rust
+Learning Vulkan with Rust.
+
+## Build
+Download Vulkan SDK https://vulkan.lunarg.com
+## Run
+`cargo run`
