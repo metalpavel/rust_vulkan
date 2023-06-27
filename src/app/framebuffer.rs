@@ -6,7 +6,7 @@ use vulkanalia::prelude::v1_0::*;
 pub unsafe fn create(device: &Device, data: &mut app_data::Data) -> Result<()> {
     data.framebuffers = data.swapchain_image_views.iter()
         .map(|i| {
-            let attachments = &[*i];
+            let attachments = &[*i, data.depth_image_view];
             let create_info = vk::FramebufferCreateInfo::builder()
                 .render_pass(data.render_pass)
                 .attachments(attachments)
